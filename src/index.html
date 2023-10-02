@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chi Vuol Essere Bitcoinario - Il Gioco</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="quiz-style.css" />
+    
+    <script src="http://code.jquery.com/jquery-1.6.min.js"></script>
+    <script src="stylesheet" href="http://code.jquery.com/jquery-1.6.js"></script>
+
+    <script src="quiz-script.js" defer></script>
+  </head>
+  <body>
+    <div class="start-page" id="start-page">
+      <div class="logo" id="logo"></div>
+
+      <button class="play" id="play">Gioca</button>
+      <button class="play" id="startPageHighscore" onclick="showHighscore()">
+        Classifica
+      </button>
+    </div>
+
+    <div class="play-game hide" id="play-game">
+      <div class="game-section" id="game-section">
+        <div class="life-line" id="life-line">
+          <button class="fifty" id="fifty"></button>
+          <button class="audience" id="audience"></button>
+          <button class="phone" id="phone"></button>
+        </div>
+        <div class="alert" id="alert"></div>
+        <div class="audience-vote" id="audience-vote">
+          <div class="a" id="a">A</div>
+          <div class="b" id="b">B</div>
+          <div class="c" id="c">C</div>
+          <div class="d" id="d">D</div>
+        </div>
+        <div class="question" id="question">Domanda</div>
+        <div class="answer" id="answer"></div>
+        <div class="controls">
+          <button class="next-btn btn hide" id="next-btn">Prossima</button>
+          <span>" "</span>
+          <button class="next-btn btn hide" id="exit-btn">Esci</button>
+        </div>
+      </div>
+      <div class="winning-section" id="winning-section">
+        <div class="won" id="won">
+          <p>+ 512</p>
+          <i class="fa fa-btc" aria-hidden="true"></i>
+        </div>
+        <div class="won" id="won">
+          <p>+ 256</p>
+          <i class="fa fa-btc" aria-hidden="true"></i>
+        </div>
+        <div class="won" id="won">
+          <p>+ 128</p>
+          <i class="fa fa-btc" aria-hidden="true"></i>
+        </div>
+        <div class="won" id="won">
+          <p>+ 64</p>
+          <i class="fa fa-btc" aria-hidden="true"></i>
+        </div>
+        <div class="won" id="won">
+          <p>+ 32</p>
+          <i class="fa fa-btc" aria-hidden="true"></i>
+        </div>
+        <div class="won" id="won">
+          <p>+ 16</p>
+          <i class="fa fa-btc" aria-hidden="true"></i>
+        </div>
+        <div class="won" id="won">
+          <p>+ 8</p>
+          <i class="fa fa-btc" aria-hidden="true"></i>
+        </div>
+        <div class="won" id="won">
+          <p>+ 4</p>
+          <i class="fa fa-btc" aria-hidden="true"></i>
+        </div>
+        <div class="won" id="won">
+          <p>+ 2</p>
+          <i class="fa fa-btc" aria-hidden="true"></i>
+        </div>
+        <div class="won" id="won">
+          <p>+ 1</p>
+          <i class="fa fa-btc" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+    <div class="game-end hide" id="game-end">
+      <div id="finalScore"></div>
+      <div class="show-winnings" id="show-winnings"></div>
+      <input  type="text" size="40" placeholder="Inserisci il tuo username" name="intials" id="initials"
+      />
+      <button class="btn" id="submitScore">Salva il tuo username</button>
+      <div class="show-winnings" id="show-winnings"></div>
+      <button class="restart-btn btn" id="restart-btn">Gioca ancora</button>
+    </div>
+    <div class="highscoreContainer hide" id="highscoreContainer">
+      <div id="high-scorePage">
+        <div id="highscore-header">
+          <ul id="highscore-header-left">Nome Utente </ul>
+          <ul>Punteggio</ul>
+          <ul id="highscore-header-right">Data </ul>
+          <ul>Tempo Sessione</ul>
+        </div>
+        <div id="highscore-initials"></div>
+        <div id="highscore-score"></div>
+        <div id="highscore-date"></div>
+        <div id="highscore-session"></div> 
+      </div>
+    </br>
+      <button class="btn" id="clearHighscore" onclick="clearScore()">
+        Cancella classifica
+      </button>
+    </br>
+      <form method="get" action="index.html">
+        <button class="btn" type="submit">indietro</button>
+      </form>
+    </div>
+  </body>
+  
+</html>
